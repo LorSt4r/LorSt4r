@@ -4,7 +4,7 @@ I'm a Computer Science student at the University of Palermo, focused on low-leve
 
 - 🔭 **Currently working on:** Engineering bare-metal Oracle Cloud ARM servers to optimize local inference for Mixture of Experts (MoE) models (specifically Qwen 3.6 35B A3B) using the Hermes harness.
 - 🌱 **Currently learning:** Advanced C memory management, Distributed Systems, and Cybersecurity (preparing for CyberChallenge.IT).
-- ⚙️ **Environment:** Daily Linux user. I build and manage local-first environments using Proxmox and Docker containerization.
+- ⚙️ **Environment:** Daily Linux user. I build and manage local-first environments using Docker containerization.
 - 🌍 **Academic:** CS Undergrad @ UniPa | Upcoming Erasmus+ Exchange @ University of Granada (2026-2027).
 
 ### 🛠️ Languages and Tools
