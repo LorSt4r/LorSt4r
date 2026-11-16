@@ -1,27 +1,26 @@
 # Lorenzo Vasile
 
-Computer Science student at the University of Palermo, focused on **C, Linux systems, ARM64 infrastructure, and backend/platform engineering**. I will study at the University of Granada through Erasmus+ from September 2026 to January 2027 and am looking for paid software or systems internships in Europe from February 2027.
+Computer Science undergraduate at the University of Palermo (Class of 2028), currently spending the Fall 2026 semester at the University of Granada (ETSIIT) through Erasmus+.
 
-## Selected engineering work
+I mostly work on **C/C++, Linux systems, ARM64 hardware, and cross-platform developer tooling**. I am currently looking for **Summer 2027** software and systems engineering internships in Europe (available July–October 2027, EU citizen).
 
-- **[Sauta](https://github.com/LorSt4r/sauta-platform)** — An independent, pre-production multi-tenant venue operations platform built with TypeScript, Fastify, PostgreSQL, Prisma, Stripe, and WorkOS. I defined the architecture, tenant isolation, RBAC, idempotent workflows, and acceptance criteria, then reviewed and validated AI-assisted implementation through unit, integration, E2E, browser tests, and CI. It has not been deployed to real venues.
-- **[ARM64 LLM Inference Lab](https://github.com/LorSt4r/arm64-llm-inference-lab)** — Reproducible configuration, benchmark tooling, and dated results for CPU-only Qwen3.6-35B-A3B inference with `ik_llama.cpp` and Hermes. Controlled tests on 30 July 2026, when the Oracle Ampere A1 VM had 4 OCPU and 24 GiB RAM, measured 34.2–37.5 tokens/s uncached prefill and 7.27 tokens/s sustained decode.
-- **[Civic Document Intelligence](https://github.com/LorSt4r/civic-document-intelligence)** — A Python CLI and deterministic analysis pipeline for parsing civic documents, checking extraction quality, and surfacing review indicators. The public repository uses synthetic fixtures and does not make allegations about real entities.
-- **Open source** — My [CMake fix for native ARM64 flags and DOTPROD kernels](https://github.com/ikawrakow/ik_llama.cpp/pull/2094) was reviewed and merged into `ik_llama.cpp`.
-- **[Chess to Lichess](https://github.com/LorSt4r/ChessToLichess)** — A published Manifest V3 browser extension that transfers completed Chess.com games to Lichess analysis. [Install it from the Chrome Web Store](https://chromewebstore.google.com/detail/chess-to-lichess/bmjpmngmefogekoellogiaeldplnbcia).
-- **[Boosted Odds Monitor](https://github.com/LorSt4r/boosted-odd-tracker)** — An asynchronous Playwright monitor with Telegram notifications, Google Sheets logging, retries, and heartbeat monitoring.
+## Selected work
 
-## How I use AI coding agents
+- **[PradoOS (`prado-os`)](https://github.com/LorSt4r/prado-os)** · [PyPI](https://pypi.org/project/prado-os/) — Local-first synchronization engine and native Menu Bar / System Tray app for UGR's PRADO (Moodle) platform across macOS, Linux, and Windows (`AGPLv3`). Built to automate course material sync without ever overwriting local student edits (4-quadrant SHA-256 + SQLite conflict resolution). Includes a 3-tier headless SAML 2.0 + MFA login pipeline backed by native OS keyrings (`Keychain`, `Credential Manager`, `SecretService` + AES-256 fallback), an `IMAP4_SSL`/`SMTP_SSL` institutional mail client, zero-dependency Google Calendar v3 OAuth2 sync, background OS daemons (`launchd`, `systemd`, `schtasks`), and 764+ `pytest` unit, adversarial, and live E2E tests across a 3-OS GitHub Actions matrix. Currently under institutional evaluation with the University of Granada's Open Source Office (OSL) and CEPRUD.
+- **[`ik_llama.cpp` (Open Source)](https://github.com/ikawrakow/ik_llama.cpp)** — Upstream contributions to the C/C++ LLM inference engine:
+  - **[PR #2094 (Merged)](https://github.com/ikawrakow/ik_llama.cpp/pull/2094):** Fixed CMake build flag propagation to enable native ARM64 `+dotprod` SIMD kernels and resolved GCC 14 `<cstdint>` / macro issues on Neoverse cores.
+  - **[PR #2410 (Merged)](https://github.com/ikawrakow/ik_llama.cpp/pull/2410):** Fixed a circular token-history buffer eviction bug in C++ that broke repetition penalties at capacity boundaries, adding a deterministic unit regression harness.
+- **[ARM64 LLM Inference Lab](https://github.com/LorSt4r/arm64-llm-inference-lab)** — Reproducible benchmark setup and profiling notes for CPU-only quantized inference (`Qwen3.6-35B-A3B` via `ik_llama.cpp`) on a 4-OCPU, 24 GiB RAM Oracle Ampere A1 Linux instance. Tuned `mlock` and cache allocation to drop swap usage from 571 MiB to 0 MiB and increase sustained decoding throughput by 23% (7.27 vs 5.92 tokens/s).
+- **[Sauta](https://github.com/LorSt4r/sauta-platform)** — Multi-tenant venue operations backend built with TypeScript, Fastify, PostgreSQL, Prisma, and Docker, implementing tenant boundary isolation, RBAC, idempotent webhook handling, and automated CI test pipelines.
+- **[Chess to Lichess](https://github.com/LorSt4r/ChessToLichess)** — Manifest V3 Chrome extension ([Chrome Web Store](https://chromewebstore.google.com/detail/chess-to-lichess/bmjpmngmefogekoellogiaeldplnbcia)) that exports finished Chess.com games directly to Lichess engine analysis.
 
-I use AI agents as engineering tools, not as a substitute for verification. My role is to define architecture and constraints, decompose work, review and integrate changes, and validate behavior through tests and reproducible checks. I only present project technologies at the level I can explain and defend.
+## Toolkit
 
-## Current toolkit
-
-- **Core:** C, Linux, Bash, Git, data structures, memory management, debugging, and performance measurement.
-- **Working knowledge:** Python, TypeScript, JavaScript, SQL, CMake, Docker, systemd, PostgreSQL, Fastify, Prisma, Vitest, and Playwright.
-- **Infrastructure:** Oracle Cloud ARM64, `llama.cpp`/GGUF, GitHub Actions, Nginx, Tailscale, and Proxmox VE.
+- **Languages:** C, C++, Python, SQL (SQLite, PostgreSQL), Bash, PowerShell, TypeScript, JavaScript.
+- **Systems & Infrastructure:** Linux (Debian/Ubuntu, ARM64), macOS, Windows, CMake, OS Daemons (`systemd`, `launchd`, `schtasks`), Docker, Git, GitHub Actions (multi-OS CI/CD), `llama.cpp` / GGUF.
+- **Security, Protocols & Testing:** SAML 2.0 SSO & MFA, OAuth2, `IMAP4_SSL` / `SMTP_SSL`, OS Native Keyrings & AES-256/SHA-256, `pytest`, Vitest, Playwright.
 
 ## Contact
 
-- [LinkedIn](https://www.linkedin.com/in/lorenzovasile07)
-- [lorenzovasile07@gmail.com](mailto:lorenzovasile07@gmail.com)
+- **LinkedIn:** [linkedin.com/in/lorenzovasile07](https://www.linkedin.com/in/lorenzovasile07)
+- **Email:** [lorenzovasile07@gmail.com](mailto:lorenzovasile07@gmail.com)
